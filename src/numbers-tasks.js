@@ -447,8 +447,8 @@ function isInteger(number) {
  * '4.567abcdefgh' => 4.567
  * 'abcdefgh'      => NaN
  */
-function getFloatOnString(/* str */) {
-  throw new Error('Not implemented');
+function getFloatOnString(str) {
+  return parseFloat(str);
 }
 
 /**
@@ -466,7 +466,7 @@ function getFloatOnString(/* str */) {
  * '10', 8              => 8
  */
 function getIntegerOnString(str, base) {
-  return parseInt(str, base);
+  return parseInt(str, base) ? str : NaN;
 }
 
 /**
@@ -538,8 +538,8 @@ function roundToNearestInteger(number) {
  * 5.4  => 5
  * -5.5 => -5
  */
-function getIntegerPartNumber(/* number */) {
-  throw new Error('Not implemented');
+function getIntegerPartNumber(number) {
+  return Math.trunc(number);
 }
 
 /**
@@ -557,7 +557,6 @@ function getIntegerPartNumber(/* number */) {
 function getSumOfNumbers(/* x1, x2, x3 */) {
   throw new Error('Not implemented');
 }
-
 /**
  * Returns the largest number.
  *
@@ -570,8 +569,8 @@ function getSumOfNumbers(/* x1, x2, x3 */) {
  * -5, -6 => -5
  * 0, 5   => 5
  */
-function getMaxNumber(/* firstNumber, secondNumber */) {
-  throw new Error('Not implemented');
+function getMaxNumber(firstNumber, secondNumber) {
+  return Math.max(firstNumber, secondNumber);
 }
 
 /**
